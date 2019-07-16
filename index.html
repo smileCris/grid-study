@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="title">display: grid</div>
+  <span>ONE</span>
+  <div id="box1">
+    <div class="item item-1">1</div>
+    <div class="item item-2">2</div>
+    <div class="item item-3">3</div>
+    <div class="item item-4">4</div>
+    <div class="item item-5">5</div>
+    <div class="item item-6">6</div>
+    <div class="item item-7">7</div>
+    <div class="item item-8">8</div>
+    <div class="item item-9">9</div>
+  </div>
+  <span>THREE</span>
+  <div class="title">display: inline-grid / grid-auto-flow: column;</div>
+  <span>ONE</span>
+  <div id="box2">
+    <div class="item item-1">1</div>
+    <div class="item item-2">2</div>
+    <div class="item item-3">3</div>
+    <div class="item item-4">4</div>
+    <div class="item item-5">5</div>
+    <div class="item item-6">6</div>
+    <div class="item item-7">7</div>
+    <div class="item item-8">8</div>
+    <div class="item item-9">9</div>
+  </div>
+  <span>THREE</span>
+  <div class="title">auto-fill 关键字</div>
+  <div id="box3">
+    <div class="item item-1">1</div>
+    <div class="item item-2">2</div>
+    <div class="item item-3">3</div>
+    <div class="item item-4">4</div>
+    <div class="item item-5">5</div>
+    <div class="item item-6">6</div>
+    <div class="item item-7">7</div>
+    <div class="item item-8">8</div>
+    <div class="item item-9">9</div>
+  </div>
+  <div class="title">fr 关键字 / minmax()</div>
+  <div id="box4">
+    <div class="item item-1">1</div>
+    <div class="item item-2">2</div>
+    <div class="item item-3">3</div>
+    <div class="item item-4">4</div>
+    <div class="item item-5">5</div>
+    <div class="item item-6">6</div>
+    <div class="item item-7">7</div>
+    <div class="item item-8">8</div>
+    <div class="item item-9">9</div>
+  </div>
+  <div class="title">auto 关键字</div>
+  <div id="box5">
+    <div class="item item-1">1</div>
+    <div class="item item-2">2</div>
+    <div class="item item-3">3</div>
+    <div class="item item-4">4</div>
+  </div>
+  <div class="title">grid-gap属性设置间距</div>
+  <div id="box6">
+    <div class="item item-1">1</div>
+    <div class="item item-2">2</div>
+    <div class="item item-3">3</div>
+    <div class="item item-4">4</div>
+  </div>
+  <div class="title">row dense "先行后列"</div>
+  <div id="box7">
+    <div class="item item-1" style="grid-column-start: 1;grid-column-end: 3">1</div>
+    <div class="item item-2" style="grid-column-start: 1;grid-column-end: 3">2</div>
+    <div class="item item-3">3</div>
+    <div class="item item-4">4</div>
+    <div class="item item-5">5</div>
+    <div class="item item-6">6</div>
+    <div class="item item-7">7</div>
+    <div class="item item-8">8</div>
+    <div class="item item-9">9</div>
+  </div>
+  <div id="box8">
+    <div class="item item-1" style="grid-column-start: 1;grid-column-end: 3">1</div>
+    <div class="item item-2" style="grid-column-start: 1;grid-column-end: 3">2</div>
+    <div class="item item-3">3</div>
+    <div class="item item-4">4</div>
+    <div class="item item-5">5</div>
+    <div class="item item-6">6</div>
+    <div class="item item-7">7</div>
+    <div class="item item-8">8</div>
+    <div class="item item-9">9</div>
+  </div>
+  <div id="box9">
+    <div class="item item-1" style="grid-column-start: 1;grid-column-end: 3">1</div>
+    <div class="item item-2" style="grid-column-start: 1;grid-column-end: 3">2</div>
+    <div class="item item-3">3</div>
+    <div class="item item-4">4</div>
+    <div class="item item-5">5</div>
+    <div class="item item-6">6</div>
+    <div class="item item-7">7</div>
+    <div class="item item-8">8</div>
+    <div class="item item-9">9</div>
+  </div>
+  <div class="title">grid-auto-columns / 和grid-auto-rows</div>
+  <div id="box10">
+    <div class="item item-1">1</div>
+    <div class="item item-2">2</div>
+    <div class="item item-3">3</div>
+    <div class="item item-4">4</div>
+    <div class="item item-5">5</div>
+    <div class="item item-6">6</div>
+    <div class="item item-7">7</div>
+    <div class="item item-8" style="grid-row-start: 4;grid-column-start: 2;">8</div>
+    <div class="item item-9" style="grid-row-start: 5;grid-column-start: 3;">9</div>
+  </div>
+  <style>
+    .title {
+      font-size: 2em;
+      color: #f8d29d;
+      padding-bottom: 10px;
+      padding-top: 30px;
+    }
+
+    span {
+      font-size: 1.2em;
+    }
+
+    #box1,
+    #box2 {
+      grid-template-columns: 50px 50px 50px;
+      grid-template-rows: 50px 50px 50px;
+    }
+
+    #box1 {
+      display: grid;
+    }
+
+    #box2 {
+      display: inline-grid;
+      grid-auto-flow: column;
+    }
+
+    #box3 {
+      width: 80%;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, 300px);
+      grid-template-rows: repeat(3, 100px);
+    }
+
+    #box4 {
+      width: 80%;
+      display: grid;
+      grid-template-columns: 150px minmax(200px, 1fr) minmax(400px, 2fr);
+    }
+
+    #box5 {
+      width: 50%;
+      display: grid;
+      grid-template-columns: 100px auto;
+    }
+
+    #box6 {
+      display: grid;
+      /* grid-gap: 20px 20px; */
+      grid-row-gap: 20px;
+      grid-column-gap: 20px;
+      grid-template-columns: 50px 50px;
+      grid-template-rows: 50px 50px;
+    }
+
+    #box7,
+    #box8,
+    #box9,
+    #box10 {
+      display: grid;
+      grid-template-columns: 100px 100px 100px;
+      grid-template-rows: 100px 100px 100px;
+    }
+
+    #box7 {
+      grid-auto-flow: row;
+    }
+
+    #box8 {
+      padding-top: 20px;
+      grid-auto-flow: row dense;
+    }
+
+    #box9 {
+      width: 370px;
+      padding-top: 20px;
+      grid-auto-flow: column dense;
+    }
+
+    #box10 {
+      grid-auto-rows: 50px;
+    }
+
+    .item {
+      font-size: 2em;
+      text-align: center;
+      border: 1px solid #e5e4e9;
+    }
+
+    .item-1 {
+      background-color: #ef342a;
+    }
+
+    .item-2 {
+      background-color: #f68f26;
+    }
+
+    .item-3 {
+      background-color: #4ba946;
+    }
+
+    .item-4 {
+      background-color: #0376c2;
+    }
+
+    .item-5 {
+      background-color: #c077af;
+    }
+
+    .item-6 {
+      background-color: #f8d29d;
+    }
+
+    .item-7 {
+      background-color: #b5a87f;
+    }
+
+    .item-8 {
+      background-color: #d0e4a9;
+    }
+
+    .item-9 {
+      background-color: #4dc7ec;
+    }
+  </style>
+</body>
+
+</html>
